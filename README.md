@@ -7,7 +7,7 @@ AI 하나가 쓴 것은 그 AI가 못 봐요. 둘이검토는 **다른 AI(또는
 1. 작업하던 AI 도구 창에 이 한 줄을 붙여 넣어요.
 
 ```
-https://github.com/wootwj-dotcom/duli 이 스킬 설치해 줘
+https://github.com/lifeschedule-dotcom/duli 이 스킬 설치해 줘
 ```
 
 클로드 코드, 코덱스 앱, 제미나이 CLI 어디든 돼요. 깃허브에서 직접 받을 건 없어요.
@@ -55,13 +55,13 @@ https://github.com/wootwj-dotcom/duli 이 스킬 설치해 줘
 Windows (PowerShell)
 
 ```powershell
-$R="https://raw.githubusercontent.com/wootwj-dotcom/duli/main/.claude/skills/duli"; $T="$env:USERPROFILE\.claude\skills\duli"; New-Item -ItemType Directory -Force "$T\templates" | Out-Null; foreach ($f in "SKILL.md","VERSION","templates/협업규칙.md","templates/AGENTS-블록.md") { Invoke-WebRequest -UseBasicParsing -Uri "$R/$f" -OutFile (Join-Path $T ($f -replace "/","\")) }; Test-Path "$T\SKILL.md"
+$R="https://raw.githubusercontent.com/lifeschedule-dotcom/duli/main/.claude/skills/duli"; $T="$env:USERPROFILE\.claude\skills\duli"; New-Item -ItemType Directory -Force "$T\templates" | Out-Null; foreach ($f in "SKILL.md","VERSION","templates/협업규칙.md","templates/AGENTS-블록.md") { Invoke-WebRequest -UseBasicParsing -Uri "$R/$f" -OutFile (Join-Path $T ($f -replace "/","\")) }; Test-Path "$T\SKILL.md"
 ```
 
 Mac / Linux
 
 ```bash
-R="https://raw.githubusercontent.com/wootwj-dotcom/duli/main/.claude/skills/duli"; T="$HOME/.claude/skills/duli"; mkdir -p "$T/templates"; for f in SKILL.md VERSION "templates/협업규칙.md" "templates/AGENTS-블록.md"; do curl -fsSL "$R/$f" -o "$T/$f"; done; ls "$T/SKILL.md"
+R="https://raw.githubusercontent.com/lifeschedule-dotcom/duli/main/.claude/skills/duli"; T="$HOME/.claude/skills/duli"; mkdir -p "$T/templates"; for f in SKILL.md VERSION "templates/협업규칙.md" "templates/AGENTS-블록.md"; do curl -fsSL "$R/$f" -o "$T/$f"; done; ls "$T/SKILL.md"
 ```
 
 코덱스에 넣으려면 `.claude/skills` 자리를 `.codex/skills`로 바꾸면 돼요.
@@ -74,12 +74,12 @@ R="https://raw.githubusercontent.com/wootwj-dotcom/duli/main/.claude/skills/duli
 
 ```powershell
 # Windows
-$R="https://raw.githubusercontent.com/wootwj-dotcom/duli/main/.claude/skills/duli"; $T="$env:USERPROFILE\.claude\skills\duli"; New-Item -ItemType Directory -Force "$T\templates" | Out-Null; foreach ($f in "SKILL.md","VERSION","templates/협업규칙.md","templates/AGENTS-블록.md") { Invoke-WebRequest -UseBasicParsing -Uri "$R/$f" -OutFile (Join-Path $T ($f -replace "/","\")) }; Test-Path "$T\SKILL.md"
+$R="https://raw.githubusercontent.com/lifeschedule-dotcom/duli/main/.claude/skills/duli"; $T="$env:USERPROFILE\.claude\skills\duli"; New-Item -ItemType Directory -Force "$T\templates" | Out-Null; foreach ($f in "SKILL.md","VERSION","templates/협업규칙.md","templates/AGENTS-블록.md") { Invoke-WebRequest -UseBasicParsing -Uri "$R/$f" -OutFile (Join-Path $T ($f -replace "/","\")) }; Test-Path "$T\SKILL.md"
 ```
 
 ```bash
 # Mac / Linux
-R="https://raw.githubusercontent.com/wootwj-dotcom/duli/main/.claude/skills/duli"; T="$HOME/.claude/skills/duli"; mkdir -p "$T/templates"; for f in SKILL.md VERSION "templates/협업규칙.md" "templates/AGENTS-블록.md"; do curl -fsSL "$R/$f" -o "$T/$f"; done; ls "$T/SKILL.md"
+R="https://raw.githubusercontent.com/lifeschedule-dotcom/duli/main/.claude/skills/duli"; T="$HOME/.claude/skills/duli"; mkdir -p "$T/templates"; for f in SKILL.md VERSION "templates/협업규칙.md" "templates/AGENTS-블록.md"; do curl -fsSL "$R/$f" -o "$T/$f"; done; ls "$T/SKILL.md"
 ```
 
 ## 만든 사람과 라이선스
